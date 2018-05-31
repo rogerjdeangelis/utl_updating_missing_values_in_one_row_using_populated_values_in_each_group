@@ -13,6 +13,11 @@ https://stackoverflow.com/questions/50564574/updating-value-in-one-row-to-anothe
 Tom's Profile
 https://stackoverflow.com/users/4965549/tom
 
+* you do get warnngs but it does work
+data want;
+  update have have(keep=fruit colour where=(not missing(colour)));
+  by fruit;
+run;quit;
 
 INPUT
 =====
