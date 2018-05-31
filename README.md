@@ -41,7 +41,12 @@ Updating missing values in one row using populated values in each group.  Keywor
       merge have(drop=colour) have(keep=fruit colour where=(not missing(colour)));
       by fruit;
     run;
-
+      
+    * you do get warnngs but it does work
+    data want;
+       update have have(keep=fruit colour where=(not missing(colour)));
+     by fruit;
+    run;quit;
 
     OUTPUT
     ======
